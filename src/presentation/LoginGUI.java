@@ -54,7 +54,9 @@ public class LoginGUI {
 		button.setBounds(140, 150, 80, 25);
 		panel.add(button);
 		
-		
+		JButton gobackButton = new JButton("Back");
+		gobackButton.setBounds(140, 180, 80, 25);
+		panel.add(gobackButton);
 		
 		frame.setVisible(true);
 		
