@@ -34,7 +34,11 @@ import businessLogic.*;
    	 public ArrayList<Account> getAccounts() {
    		 return accounts;
    	 }
-
+   	 
+   	 public ArrayList<Reward> getRewards(){
+   		 return rewards;
+   	 }
+   	 
    	 public String toString(){
    		 String list = "[ ";
    		 for (int i = 0; i < accounts.size(); i++)
