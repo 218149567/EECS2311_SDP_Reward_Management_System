@@ -84,21 +84,20 @@ public class SignupGUI {
 		char[] password1 = firstPasswordTextbox.getPassword();
 		char[] password2 = secondPasswordBox.getPassword();
 		if (name.isEmpty() || username.isEmpty() || password1.length == 0 || password2.length == 0) {
-			// Display an error message
+			
 			System.out.println("Please fill in all fields.");
 		} else if (!new String(password1).equals(new String(password2))) {
-			// Display an error message
+			
 			System.out.println("Passwords do not match.");
 		} else {
-			// Create a new user account
-			// You can put your account creation code here
+			
 			System.out.println("Account created successfully.");
-			// Clear the input fields
+			
 			nameText.setText("");
 			userText.setText("");
 			firstPasswordTextbox.setText("");
 			secondPasswordBox.setText("");
-			// Hide the signup window
+			
 			show(false);
 		}
 	}
