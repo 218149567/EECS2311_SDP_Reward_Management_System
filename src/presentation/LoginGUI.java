@@ -16,7 +16,6 @@ public class LoginGUI {
 		JPanel panel = new JPanel();
 		frame.add(panel);	
 		
-		
 		panel.setLayout(null);
 		JLabel inputprompt = new JLabel("Welcome!");
 		inputprompt.setBounds(160, 0, 80, 25);
