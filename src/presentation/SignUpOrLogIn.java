@@ -30,7 +30,7 @@ public class SignUpOrLogIn {
 		logInbutton.setBounds(220, 50, 80, 25);
 		panel.add(logInbutton);
 		
-		
+		//Action Listener
         signUpbutton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 SignupGUI signUpPage = new SignupGUI();
