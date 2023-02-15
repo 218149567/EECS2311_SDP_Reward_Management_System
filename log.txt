@@ -4,7 +4,12 @@ Meetings with My Team
         Discussed tasks for iteration 1 of the project
         Split up the work among team members
         Assigned tasks that were missed during the meeting
-    Monday
+    Monday, Feb 13
         Reviewed progress on tasks
         Reassigned work for team members who had too much on their plate
         Assigned additional tasks that were missed during the previous meeting
+    Wednesday, Feb 15
+	Reviewed progress on tasks
+	Fixed Github errors
+	Worked together on the GUI
+	Reassigned final Tasks
