@@ -40,6 +40,8 @@ package persistence;
 			return null;
 		}
 		public void removeReward(Reward reward) {
-			
+			if(ManagementSystem.db.getRewards().contains(reward)) {
+				ManagementSystem.db.getRewards().remove(reward);
+			}
 		}
 }
