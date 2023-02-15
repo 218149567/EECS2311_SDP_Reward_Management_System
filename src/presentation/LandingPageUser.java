@@ -16,9 +16,9 @@ public class LandingPageUser {
 		frame.setVisible(true);
 		//
 		panel.setLayout(null);
-		JLabel inputprompt = new JLabel("Users View");
-		inputprompt.setBounds(220, 0, 80, 25);
-		panel.add(inputprompt);
+		JLabel typeofviewuser = new JLabel("Userss View");
+		typeofviewuser.setBounds(220, 0, 80, 25);
+		panel.add(typeofviewuser);
 
 }
 }

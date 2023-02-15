@@ -16,9 +16,9 @@ public class LandingPageAdmin {
 			frame.setVisible(true);
 			//
 			panel.setLayout(null);
-			JLabel inputprompt = new JLabel("Admin View");
-			inputprompt.setBounds(220, 0, 80, 25);
-			panel.add(inputprompt);
+			JLabel typeofviewadmin = new JLabel("Admins View");
+			typeofviewadmin.setBounds(220, 0, 80, 25);
+			panel.add(typeofviewadmin);
 
 	}
 }
