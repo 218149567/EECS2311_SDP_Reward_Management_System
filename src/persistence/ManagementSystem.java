@@ -27,4 +27,19 @@ package persistence;
 			}
 			return null;
 		}
+		public void addReward(Reward reward) {
+			ManagementSystem.db.getRewards().add(reward);
+		}
+		
+		public Reward getReward(String name) {
+			for(Reward reward : ManagementSystem.db.getRewards()) {
+				if(reward.getName().equals(name)) {
+					return reward;
+				}
+			}
+			return null;
+		}
+		public void removeReward(Reward reward) {
+			
+		}
 }
