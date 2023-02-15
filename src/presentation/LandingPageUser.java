@@ -1,5 +1,6 @@
 package presentation;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -19,6 +20,10 @@ public class LandingPageUser {
 		JLabel typeofviewuser = new JLabel("Userss View");
 		typeofviewuser.setBounds(220, 0, 80, 25);
 		panel.add(typeofviewuser);
+		
+		JButton lPageButtonUser = new JButton("button");
+		lPageButtonUser.setBounds(350, 50, 80, 25);
+		panel.add(lPageButtonUser);
 
-}
+	}
 }
