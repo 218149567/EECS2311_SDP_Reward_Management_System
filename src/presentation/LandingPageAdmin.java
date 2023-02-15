@@ -1,5 +1,6 @@
 package presentation;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -19,6 +20,11 @@ public class LandingPageAdmin {
 			JLabel typeofviewadmin = new JLabel("Admins View");
 			typeofviewadmin.setBounds(220, 0, 80, 25);
 			panel.add(typeofviewadmin);
+			
+			
+			JButton lPageButtonAdmin = new JButton("button");
+			lPageButtonAdmin.setBounds(350, 50, 80, 25);
+			panel.add(lPageButtonAdmin);
 
 	}
 }
