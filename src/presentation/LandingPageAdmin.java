@@ -72,7 +72,7 @@ public class LandingPageAdmin {
 		attributePassword.setBounds(50, 200, 200, 25);
 		panel.add(attributePassword);
 
-		JLabel attributeId = new JLabel("ID: " + user.getUsername());
+		JLabel attributeId = new JLabel("ID: " + user.getId());
 		attributeId.setBounds(50, 250, 200, 25);
 		panel.add(attributeId);
 

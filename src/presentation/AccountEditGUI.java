@@ -110,9 +110,18 @@ public class AccountEditGUI extends JFrame {
 
 			// show a message dialog to confirm that the account was saved
 			JOptionPane.showMessageDialog(this, "New Account Setting Saved!");
+			
+			//Open the landing page after exiting
+			LandingPageAdmin landingPage = new LandingPageAdmin();
+			dispose();
 		});
 
 		cancelButton.addActionListener(e -> {
+			// show a message dialog to confirm that the account was saved
+			JOptionPane.showMessageDialog(this, "Cancel Account Settings.");
+			
+			//Open the landing page after exiting
+			LandingPageAdmin landingPage = new LandingPageAdmin();
 			dispose();
 		});
 
