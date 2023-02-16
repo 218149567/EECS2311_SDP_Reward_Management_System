@@ -17,7 +17,7 @@ public class LoginGUI {
     private JPasswordField passwordText;
 
     public void show() {
-        
+
         frame = new JFrame();
         frame.setSize(400, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,7 +26,6 @@ public class LoginGUI {
 
         panel.setLayout(null);
 
-        
         JLabel userLabel = new JLabel("Username");
         userLabel.setBounds(10, 30, 80, 25);
         panel.add(userLabel);
@@ -43,7 +42,6 @@ public class LoginGUI {
         passwordText.setBounds(100, 70, 165, 25);
         panel.add(passwordText);
 
-        
         JButton loginButton = new JButton("Login");
         loginButton.setBounds(160, 120, 80, 25);
         panel.add(loginButton);
@@ -52,15 +50,38 @@ public class LoginGUI {
         backButton.setBounds(160, 150, 80, 25);
         panel.add(backButton);
 
-       
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                SignUpOrLogIn startPage = new SignUpOrLogIn();
+                startPage.main(null);
+                frame.dispose();
+            }
+        });
+
         loginButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String username = userText.getText();
                 String password = new String(passwordText.getPassword());
-                
+                boolean loggedIn = false;
+                /* check if the:
+                 entered username and password are valid. If they are,
+                 set the loggedIn flag to true.
+                */
+
+                if (loggedIn) {
+                    LandingPageUser landingPageUser = new LandingPageUser(loggedIn);
+                    landingPageUser.show();
+                    frame.dispose();
+                } else {
+                	//display error message "invalid username or password"
+                }
             }
         });
 
         frame.setVisible(true);
     }
 }
+
+
+
+
