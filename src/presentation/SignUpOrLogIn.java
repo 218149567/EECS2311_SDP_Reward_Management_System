@@ -40,13 +40,13 @@ public class SignUpOrLogIn {
         });
         
         //Action Listener
-//        logInbutton.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                LoginGUI logInPage = new LoginGUI();
-//                logInPage.show();
-//                frame.dispose();
-//            }
-//        });
+        logInbutton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                LoginGUI logInPage = new LoginGUI();
+                logInPage.show();
+                frame.dispose();
+            }
+        });
 		
 		
 		frame.setVisible(true);
