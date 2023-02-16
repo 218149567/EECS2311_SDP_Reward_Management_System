@@ -20,5 +20,9 @@ public class PointsReceiver extends Account{
 	public void addPoints(int points) {
 		this.balance += points;
 	}
+	
+	public void removePoints(int points) {
+		this.balance -= points;
+	}
 
 }
