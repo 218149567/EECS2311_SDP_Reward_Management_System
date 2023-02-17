@@ -39,6 +39,11 @@ public class StubDataBase {
 		return rewards;
 	}
 
+	//adds accounts
+	public void addAccount(Account user) {
+	    accounts.add(user);
+	}
+
 	public String toString() {
 		String list = "[ ";
 		for (int i = 0; i < accounts.size(); i++) {

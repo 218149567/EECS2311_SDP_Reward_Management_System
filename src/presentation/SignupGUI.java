@@ -7,6 +7,10 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import businessLogic.Account;
+import businessLogic.PointsReceiver;
+import persistence.StubDataBase;
+
 public class SignupGUI {
 	
 	private JFrame frame;
@@ -15,8 +19,10 @@ public class SignupGUI {
 	private JTextField userText;
 	private JPasswordField firstPasswordTextbox;
 	private JPasswordField secondPasswordBox;
+	private StubDataBase db;
 	
 	public SignupGUI() {
+		db = new StubDataBase();
 		frame = new JFrame();
 		frame.setSize(400,400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -90,9 +96,11 @@ public class SignupGUI {
 			
 			System.out.println("Passwords do not match.");
 		} else {
+			Account newUser = new Account(name, username, new String(password1));
+			db.addAccount(newUser);
 			
-			System.out.println("Account created successfully.");
-			
+	        System.out.println("Account created successfully.");
+		
 			nameText.setText("");
 			userText.setText("");
 			firstPasswordTextbox.setText("");
