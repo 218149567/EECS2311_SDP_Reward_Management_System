@@ -13,14 +13,13 @@ public class PointsReceiver extends Account{
 		this.role = "PR";
 	}
 	
-<<<<<<< HEAD
-=======
+
 	public void createPR(String name, String username, String password) {
 		
 		PointsReceiver pr = new PointsReceiver(name, username, password);
 		system.addAccount(pr);
 	}
->>>>>>> branch 'main' of https://github.com/218149567/EECS2311_SDP_Reward_Management_System.git
+
 	
 	public int checkBalance() {
 		return this.balance;
