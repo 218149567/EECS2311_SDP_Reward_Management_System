@@ -10,6 +10,9 @@ public class Account {
 	private int id;
 	private static int idCounter = 1;
 	
+	protected static StubDataBase DB = new StubDataBase();
+	protected static ManagementSystem system = new ManagementSystem(DB);
+	
 	
 	public Account(){
 	}
@@ -19,6 +22,10 @@ public class Account {
 		this.username = username;
 		this.password = password;
 		this.id = idCounter++;
+	}
+	
+	public static ManagementSystem getSystem() {
+		return system;
 	}
 	
 	public String getRole() {
@@ -65,6 +72,24 @@ public class Account {
 		
 		return this.getUsername();
 		
+	}
+	
+	public boolean usernameChecker(String username) {
+		if( system.getAccount(username) != null) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public boolean passwordChecker(String username, String password) {
+		if(system.getAccount(username).getPassword().equals(password)) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 }
