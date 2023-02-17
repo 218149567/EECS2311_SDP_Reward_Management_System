@@ -9,66 +9,99 @@ import javax.swing.JTextField;
 
 public class SignupGUI {
 	
+	private JFrame frame;
+	private JPanel panel;
+	private JTextField nameText;
+	private JTextField userText;
+	private JPasswordField firstPasswordTextbox;
+	private JPasswordField secondPasswordBox;
 	
-	public static void main(String[] args) {
-		JFrame frame = new JFrame();
+	public SignupGUI() {
+		frame = new JFrame();
 		frame.setSize(400,400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		JPanel panel = new JPanel();
+		
+		panel = new JPanel();
 		frame.add(panel);	
 		
 		panel.setLayout(null);
-		JLabel inputprompt = new JLabel("Sign Up");
-		inputprompt.setBounds(180, 0, 80, 25);
-		panel.add(inputprompt);
+		JLabel inputPrompt = new JLabel("Sign Up");
+		inputPrompt.setBounds(180, 0, 80, 25);
+		panel.add(inputPrompt);
 		
-		panel.setLayout(null);
-		JLabel nameofuser = new JLabel("Name");
-		nameofuser.setBounds(10, 30, 80, 25);
-		panel.add(nameofuser);
+		JLabel nameLabel = new JLabel("Name");
+		nameLabel.setBounds(10, 30, 80, 25);
+		panel.add(nameLabel);
 		
-		panel.setLayout(null);
-		JLabel Userlabel = new JLabel("Username");
-		Userlabel.setBounds(10, 70, 80, 25);
-		panel.add(Userlabel);
+		JLabel userLabel = new JLabel("Username");
+		userLabel.setBounds(10, 70, 80, 25);
+		panel.add(userLabel);
 		
-		panel.setLayout(null);
-		JLabel Passlabel = new JLabel("Password");
-		Passlabel.setBounds(10, 110, 80, 25);
-		panel.add(Passlabel);
+		JLabel passLabel = new JLabel("Password");
+		passLabel.setBounds(10, 110, 80, 25);
+		panel.add(passLabel);
 		
-		panel.setLayout(null);
-		JLabel Passlabel2 = new JLabel("Password Again");
-		Passlabel2.setBounds(10, 150, 800, 25);
-		panel.add(Passlabel2);
+		JLabel passLabel2 = new JLabel("Password Again");
+		passLabel2.setBounds(10, 150, 800, 25);
+		panel.add(passLabel2);
 		
-		JTextField nameText = new JTextField(20);
+		nameText = new JTextField(20);
 		nameText.setBounds(120,30,165,25);
 		panel.add(nameText);
 		
-		JTextField userText = new JTextField(20);
+		userText = new JTextField(20);
 		userText.setBounds(120,70,165,25);
 		panel.add(userText);
 		
-		JTextField firstPasswordtextbox = new JTextField(20);
-		firstPasswordtextbox.setBounds(120, 110, 165, 25);
-		panel.add(firstPasswordtextbox);
+		firstPasswordTextbox = new JPasswordField(20);
+		firstPasswordTextbox.setBounds(120, 110, 165, 25);
+		panel.add(firstPasswordTextbox);
 		
-		JPasswordField secondpasswordBox = new JPasswordField();
-		secondpasswordBox.setBounds(120, 150, 165, 25);
-		panel.add(secondpasswordBox);
+		secondPasswordBox = new JPasswordField(20);
+		secondPasswordBox.setBounds(120, 150, 165, 25);
+		panel.add(secondPasswordBox);
 		
-		JButton signUp = new JButton("Sign Up");
-		signUp.setBounds(160, 180, 80, 25);
-		panel.add(signUp);
+		JButton signUpButton = new JButton("Sign Up");
+		signUpButton.setBounds(160, 180, 80, 25);
+		signUpButton.addActionListener(e -> signUp());
+		panel.add(signUpButton);
 		
 		JButton backButton = new JButton("Back");
 		backButton.setBounds(160, 210, 80, 25);
+		backButton.addActionListener(e -> show(false));
 		panel.add(backButton);
 		
-		
-		frame.setVisible(true);
-
-		
+		frame.setVisible(false);
+	}
+	
+	public void show(boolean b) {
+		frame.setVisible(b);
+	}
+	
+	private void signUp() {
+		String name = nameText.getText();
+		String username = userText.getText();
+		char[] password1 = firstPasswordTextbox.getPassword();
+		char[] password2 = secondPasswordBox.getPassword();
+		if (name.isEmpty() || username.isEmpty() || password1.length == 0 || password2.length == 0) {
+			
+			System.out.println("Please fill in all fields.");
+		} else if (!new String(password1).equals(new String(password2))) {
+			
+			System.out.println("Passwords do not match.");
+		} else {
+			
+			System.out.println("Account created successfully.");
+			
+			nameText.setText("");
+			userText.setText("");
+			firstPasswordTextbox.setText("");
+			secondPasswordBox.setText("");
+			
+			show(false);
+		}
 	}
 }
+
+	
+

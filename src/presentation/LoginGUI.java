@@ -1,5 +1,8 @@
 package presentation;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -8,56 +11,77 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class LoginGUI {
+    private JFrame frame;
+    private JPanel panel;
+    private JTextField userText;
+    private JPasswordField passwordText;
 
-	public static void main(String[] args) {
-		JFrame frame = new JFrame();
-		frame.setSize(400,400);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		JPanel panel = new JPanel();
-		frame.add(panel);	
-		
-		panel.setLayout(null);
-		JLabel inputprompt = new JLabel("Welcome!");
-		inputprompt.setBounds(160, 0, 80, 25);
-		panel.add(inputprompt);
-		
-		panel.setLayout(null);
-		JLabel nameofuser = new JLabel("Name");
-		nameofuser.setBounds(10, 30, 80, 25);
-		panel.add(nameofuser);
-		
-		panel.setLayout(null);
-		JLabel Userlabel = new JLabel("Username");
-		Userlabel.setBounds(10, 70, 80, 25);
-		panel.add(Userlabel);
-		
-		panel.setLayout(null);
-		JLabel Passlabel = new JLabel("Password");
-		Passlabel.setBounds(10, 110, 80, 25);
-		panel.add(Passlabel);
-		
-		JTextField nameText = new JTextField(20);
-		nameText.setBounds(100,30,165,25);
-		panel.add(nameText);
-		
-		JTextField userText = new JTextField(20);
-		userText.setBounds(100,70,165,25);
-		panel.add(userText);
-		
-		
-		JPasswordField startextpass = new JPasswordField();
-		startextpass.setBounds(100, 110, 165, 25);
-		panel.add(startextpass);
-		
-		JButton button = new JButton("Enter");
-		button.setBounds(140, 150, 80, 25);
-		panel.add(button);
-		
-		JButton gobackButton = new JButton("Back");
-		gobackButton.setBounds(140, 180, 80, 25);
-		panel.add(gobackButton);
-		
-		frame.setVisible(true);
-		
-	}
+    public void show() {
+
+        frame = new JFrame();
+        frame.setSize(400, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panel = new JPanel();
+        frame.add(panel);
+
+        panel.setLayout(null);
+
+        JLabel userLabel = new JLabel("Username");
+        userLabel.setBounds(10, 30, 80, 25);
+        panel.add(userLabel);
+
+        userText = new JTextField(20);
+        userText.setBounds(100, 30, 165, 25);
+        panel.add(userText);
+
+        JLabel passwordLabel = new JLabel("Password");
+        passwordLabel.setBounds(10, 70, 80, 25);
+        panel.add(passwordLabel);
+
+        passwordText = new JPasswordField();
+        passwordText.setBounds(100, 70, 165, 25);
+        panel.add(passwordText);
+
+        JButton loginButton = new JButton("Login");
+        loginButton.setBounds(160, 120, 80, 25);
+        panel.add(loginButton);
+
+        JButton backButton = new JButton("Back");
+        backButton.setBounds(160, 150, 80, 25);
+        panel.add(backButton);
+
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                SignUpOrLogIn startPage = new SignUpOrLogIn();
+                startPage.main(null);
+                frame.dispose();
+            }
+        });
+
+        loginButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String username = userText.getText();
+                String password = new String(passwordText.getPassword());
+                boolean loggedIn = false;
+                /* check if the:
+                 entered username and password are valid. If they are,
+                 set the loggedIn flag to true.
+                */
+
+                if (loggedIn) {
+                    LandingPageUser landingPageUser = new LandingPageUser(loggedIn);
+                    landingPageUser.show();
+                    frame.dispose();
+                } else {
+                	//display error message "invalid username or password"
+                }
+            }
+        });
+
+        frame.setVisible(true);
+    }
 }
+
+
+
+

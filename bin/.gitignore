@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 /businessLogicTest/
 /businessLogic/
 /persistence/
 /presentation/
 /persistenceTest/
 /presentationTest/
+=======
+/presentation/
+/businessLogic/
+/persistence/
+>>>>>>> 9fd95362ea95e9a5fce7989a8f1c7f57b2826923

@@ -1,5 +1,8 @@
 package presentation;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -27,8 +30,29 @@ public class SignUpOrLogIn {
 		logInbutton.setBounds(220, 50, 80, 25);
 		panel.add(logInbutton);
 		
+		//Action Listener
+        signUpbutton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                SignupGUI signUpPage = new SignupGUI();
+                signUpPage.show(true);
+                frame.dispose();
+            }
+        });
+        
+        //Action Listener
+        logInbutton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                LoginGUI logInPage = new LoginGUI();
+                logInPage.show();
+                frame.dispose();
+            }
+        });
+		
 		
 		frame.setVisible(true);
+		
 
+		
 	}
 }
+
