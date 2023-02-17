@@ -39,6 +39,7 @@ public class StubDataBase {
 		return rewards;
 	}
 
+	//adds accounts
 	public void addAccount(Account user) {
 	    accounts.add(user);
 	}
