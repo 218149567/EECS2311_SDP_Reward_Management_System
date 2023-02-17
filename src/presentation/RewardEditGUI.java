@@ -17,15 +17,12 @@ public class RewardEditGUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JLabel nameLabel, rewardDescriptionLabel, costLabel, quantityLabel;
-	private JLabel attributeName, attributeDescription, attributeCost, attributeQuantity;
 	private JTextField nameField, descriptionField, costField, quantityField;
 	private JButton addRewardButton, closeButton;
 	private JTable rewardTable;
 
 	private ManagementSystem dbManager;
 	private StubDataBase dbData;
-	private Reward reward;
-	
 	private static RewardEditGUI instance;
 	
 	public RewardEditGUI() {
