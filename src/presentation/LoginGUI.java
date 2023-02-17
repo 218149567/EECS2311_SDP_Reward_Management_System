@@ -6,9 +6,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import businessLogic.Account;
+import persistence.StubDataBase;
 
 public class LoginGUI {
     private JFrame frame;
@@ -63,17 +67,22 @@ public class LoginGUI {
                 String username = userText.getText();
                 String password = new String(passwordText.getPassword());
                 boolean loggedIn = false;
-                /* check if the:
-                 entered username and password are valid. If they are,
-                 set the loggedIn flag to true.
-                */
+                for (Account account : StubDataBase.getAccounts()) {
+                    if (account.getUsername().equals(username) && account.getPassword().equals(password)) {
+                        loggedIn = true;
+                        break;
+                    }
+                }
+
 
                 if (loggedIn) {
-//                    LandingPageUser landingPageUser = new LandingPageUser(loggedIn);
-//                    landingPageUser.show();
                     frame.dispose();
                 } else {
                 	//display error message "invalid username or password"
+                	JOptionPane.showMessageDialog(frame, "Invalid username or password. Please try again.");
+                    userText.setText("");
+                    passwordText.setText("");
+
                 }
             }
         });

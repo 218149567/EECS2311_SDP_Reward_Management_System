@@ -31,7 +31,7 @@ public class StubDataBase {
 		StubDataBase.rewards.add(reward4);
 	}
 
-	public ArrayList<Account> getAccounts() {
+	public static ArrayList<Account> getAccounts() {
 		return accounts;
 	}
 
