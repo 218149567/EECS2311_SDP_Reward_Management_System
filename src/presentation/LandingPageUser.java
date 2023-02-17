@@ -14,6 +14,8 @@ public class LandingPageUser {
 
 	private JFrame frame;
 	private JPanel panel;
+	private JTextField textPoints;
+
 
 	public LandingPageUser() {
 
@@ -80,7 +82,41 @@ public class LandingPageUser {
 		JLabel attributeBalance = new JLabel("Balance: " + user.checkBalance());
 		attributeBalance.setBounds(50, 300, 200, 25);
 		panel.add(attributeBalance);
+		
+		JLabel reqPoint = new JLabel("Request Points: ");
+		reqPoint.setBounds(50, 450, 200, 25);
+		panel.add(reqPoint);
+		
+		JButton buttonPointsreq = new JButton("Request");
+		buttonPointsreq.setBounds(350, 450, 100, 25);
+		panel.add(buttonPointsreq);
+		
+		textPoints = new JTextField(20);
+		textPoints.setBounds(200,450,100,25);
+		panel.add(textPoints);
+		
+		
 
+		// ---- GET THIS CHCKECD OUT -------
+		buttonPointsreq.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				Administrator requestNew = new Administrator();
+				PointsReceiver user = null;
+				String request;
+				String textFieldValue = textPoints.getText();
+
+				for (Account account : dbData.getAccounts()) {
+					if (account instanceof PointsReceiver) {
+						user = (PointsReceiver) account;
+						break;
+					}
+				}
+				request =  (textFieldValue.toString().concat(" for  " + user.getUsername()));
+				requestNew.addPointRequest(request);
+				System.out.println(textFieldValue.toString().concat(" for  " + user.getUsername()));
+			   }
+			});
+		
 		// Create the JComboBox drop-down menu
 		JComboBox<String> rewardMenuOptions = new JComboBox<>(rewardNamesAndCosts);
 		rewardMenuOptions.setBounds(50, 400, 200, 25);
@@ -154,4 +190,5 @@ public class LandingPageUser {
 
 	}
 }
+
 

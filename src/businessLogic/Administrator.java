@@ -3,8 +3,7 @@ package businessLogic;
 import java.util.ArrayList;
 
 public class Administrator extends Account{
-	
-	private ArrayList <String> pointRequests;
+	private ArrayList<String> pointRequests = new ArrayList<>();
 	
 	public Administrator() {
 	}

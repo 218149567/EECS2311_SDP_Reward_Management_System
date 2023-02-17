@@ -1,16 +1,13 @@
 package persistenceTest;
-import persistence.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import businessLogic.Account;
-import businessLogic.Administrator;
-import businessLogic.PointsReceiver;
-import businessLogic.Reward;
 
 import java.util.ArrayList;
+
+import org.junit.jupiter.api.*;
+
+import businessLogic.*;
+import persistence.StubDataBase;
 
 public class StubDataBaseTest {
 
@@ -33,15 +30,15 @@ public class StubDataBaseTest {
 
         account = accounts.get(1);
         assertTrue(account instanceof PointsReceiver);
-        assertEquals("joe123", account.getUsername());
+        assertEquals("Joe", account.getUsername());
 
         account = accounts.get(2);
         assertTrue(account instanceof PointsReceiver);
-        assertEquals("tara99", account.getUsername());
+        assertEquals("Tara", account.getUsername());
 
         account = accounts.get(3);
         assertTrue(account instanceof PointsReceiver);
-        assertEquals("mike65", account.getUsername());
+        assertEquals("Mike", account.getUsername());
     }
 
     @Test
@@ -77,7 +74,7 @@ public class StubDataBaseTest {
 
     @Test
     public void testToString() {
-        String expected = "[ admin, joe123, tara99, mike65,]";
+        String expected = "[ admin, Joe, Tara, Mike]";
         String actual = stubDB.toString();
         assertEquals(expected, actual);
     }

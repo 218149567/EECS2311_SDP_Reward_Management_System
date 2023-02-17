@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class AdministratorTest {
+public class AdministratorTest {
 
     @Test
     void testCreateAdmin() {
