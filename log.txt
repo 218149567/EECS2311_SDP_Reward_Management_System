@@ -1,17 +1,42 @@
 Meetings with My Team
 
     Wednesday, Feb 8
-        Discussed tasks for iteration 1 of the project
-        Split up the work among team members
-        Assigned tasks that were missed during the meeting
+        - Discussed tasks for iteration 1 of the project
+        - Split up the work among team members
+        - Assigned tasks that were missed during the meeting
+
+
     Monday, Feb 13
-        Reviewed progress on tasks
-        Reassigned work for team members who had too much on their plate
-        Assigned additional tasks that were missed during the previous meeting
+        - Reviewed progress on tasks
+        - Reassigned work for team members who had too much on their plate
+        - Assigned additional tasks that were missed during the previous meeting
+
+
     Wednesday, Feb 15
-	Reviewed progress on tasks
-	Fixed Github errors
-	Worked together on the GUI
-	Reassigned final Tasks
-	Thursday, Feb 16
-	Added implementation to editting the account and rewards through the GUI
+	- Reviewed progress on tasks
+	- Fixed Github errors
+	- Worked together on the GUI
+	- Reassigned final Tasks
+
+
+    Thursday, Feb 16
+	- Added implementation to editing the account and rewards through the GUI
+
+    Friday, Feb 17
+	- Reviewed the work we had completed so far
+	- Our backend had been created, with the Accounts, Rewards and Management System classes 
+	  fully implemented.
+	- The sign in/sign up page was also finished.
+	- We finished the UI for the signup page, login page, points receiver page, admin page and 
+	  the reward page.
+	- We designed the points receiver page to have a request points button and a check              
+          balance button.
+	- The admin page was designed to have a button for sending points and another for accepting/		
+	  denying point requests.
+
+	In addition, we had also
+	- Created jUnit tests for the businessLogic package
+	- Created all the necessary written documentation (architectural sketch, wiki and log file).
+	 
+	
+	
