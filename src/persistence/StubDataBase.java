@@ -31,12 +31,17 @@ public class StubDataBase {
 		StubDataBase.rewards.add(reward4);
 	}
 
-	public ArrayList<Account> getAccounts() {
+	public static ArrayList<Account> getAccounts() {
 		return accounts;
 	}
 
 	public ArrayList<Reward> getRewards() {
 		return rewards;
+	}
+
+	//adds accounts
+	public void addAccount(Account user) {
+	    accounts.add(user);
 	}
 
 	public String toString() {

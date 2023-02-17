@@ -1,6 +1,10 @@
 package businessLogic;
 
+import java.util.ArrayList;
+
 public class Administrator extends Account{
+	
+	private ArrayList <String> pointRequests;
 	
 	public Administrator() {
 	}
@@ -33,4 +37,12 @@ public class Administrator extends Account{
 		int index = system.getDb().getAccounts().indexOf(system.getAccount(username));
 		system.getDb().getAccounts().remove(index);
 	}
+
+	public void addPointRequest(String request) {
+        pointRequests.add(request);
+    }
+	
+    public ArrayList <String> getPointRequests() {
+        return pointRequests;
+    }
 }

@@ -37,11 +37,14 @@ public class ManagementSystem {
 		}
 		return null;
 	}
+	
+	public Account getAdministrator() {
+		return db.getAccounts().get(0);
+	}
 
 	public void updatePointsReceiver(PointsReceiver updatedUser) {
 		PointsReceiver user = (PointsReceiver) getAccount(updatedUser.getId());
 	    if (user != null) {
-	        // save the updated user to the database
 	        db.getAccounts().set(db.getAccounts().indexOf(user), user);
 	    }
 	}
