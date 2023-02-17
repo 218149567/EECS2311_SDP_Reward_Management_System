@@ -20,7 +20,7 @@ public class AccountEditGUI extends JFrame {
 	public AccountEditGUI() {
 		// Set up the window properties
 		setTitle("Account Editing Page");
-		setSize(500, 500);
+		setSize(600, 400);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLayout(null);
 
@@ -51,7 +51,7 @@ public class AccountEditGUI extends JFrame {
 
 		// text field for name
 		nameField = new JTextField();
-		nameField.setBounds(300, 100, 150, 25);
+		nameField.setBounds(350, 100, 150, 25);
 		panel.add(nameField);
 
 		// username
@@ -60,24 +60,24 @@ public class AccountEditGUI extends JFrame {
 		panel.add(attributeUsername);
 
 		usernameLabel = new JLabel("Change Username: ");
-		usernameLabel.setBounds(200, 150, 100, 25);
+		usernameLabel.setBounds(200, 150, 300, 25);
 		panel.add(usernameLabel);
 
 		usernameField = new JTextField();
-		usernameField.setBounds(300, 150, 150, 25);
+		usernameField.setBounds(350, 150, 150, 25);
 		panel.add(usernameField);
 
 		// password
 		attributePassword = new JLabel("Password: " + user.getPassword());
-		attributePassword.setBounds(50, 200, 200, 25);
+		attributePassword.setBounds(50, 200, 300, 25);
 		panel.add(attributePassword);
 
 		passwordLabel = new JLabel("Change Password: ");
-		passwordLabel.setBounds(200, 200, 100, 25);
+		passwordLabel.setBounds(200, 200, 300, 25);
 		panel.add(passwordLabel);
 
 		passwordField = new JPasswordField();
-		passwordField.setBounds(300, 200, 150, 25);
+		passwordField.setBounds(350, 200, 150, 25);
 		panel.add(passwordField);
 
 		// save and cancel buttons
@@ -86,7 +86,7 @@ public class AccountEditGUI extends JFrame {
 		panel.add(saveButton);
 
 		cancelButton = new JButton("Cancel");
-		cancelButton.setBounds(200, 300, 100, 25);
+		cancelButton.setBounds(300, 300, 100, 25);
 		panel.add(cancelButton);
 
 		// implementation of the save/cancel buttons
