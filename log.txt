@@ -13,3 +13,5 @@ Meetings with My Team
 	Fixed Github errors
 	Worked together on the GUI
 	Reassigned final Tasks
+	Thursday, Feb 16
+	Added implementation to editting the account and rewards through the GUI
