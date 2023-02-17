@@ -33,10 +33,9 @@ Meetings with My Team
           balance button.
 	- The admin page was designed to have a button for sending points and another for accepting/		
 	  denying point requests.
-
-	In addition, we had also
-	- Created jUnit tests for the businessLogic package
-	- Created all the necessary written documentation (architectural sketch, wiki and log file).
+	- We had also created jUnit tests for the businessLogic package
+	- Lastly, we created all the necessary written documentation (architectural sketch, wiki and 
+	  log file).
 	 
 	
 	
