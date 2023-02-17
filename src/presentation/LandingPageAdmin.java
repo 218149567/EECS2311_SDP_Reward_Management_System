@@ -87,7 +87,7 @@ public class LandingPageAdmin {
 		panel.add(rewardMenuOptions);
 		// Add submit button to redeem the selected reward
 		JButton redeemButton = new JButton("Redeem");
-		redeemButton.setBounds(350, 400, 80, 25);
+		redeemButton.setBounds(350, 400, 100, 25);
 		panel.add(redeemButton);
 		panel.revalidate();
 		panel.repaint();
@@ -131,8 +131,8 @@ public class LandingPageAdmin {
 		});
 		
 		//account edit button to open editting window
-		JButton accountEditButton = new JButton("Edit Account Information");
-		accountEditButton.setBounds(50, 350, 80, 25);
+		JButton accountEditButton = new JButton("Edit Account Info");
+		accountEditButton.setBounds(50, 350, 150, 25);
 		panel.add(accountEditButton);
 		
 		//listener for opening the window and closes the previous window
@@ -144,7 +144,7 @@ public class LandingPageAdmin {
 		});
 		
 		JButton rewardEditButton = new JButton("Edit Rewards");
-		rewardEditButton.setBounds(350, 350, 80, 25);
+		rewardEditButton.setBounds(350, 350, 115, 25);
 		panel.add(rewardEditButton);
 		
 		rewardEditButton.addActionListener(new ActionListener() {
@@ -154,6 +154,8 @@ public class LandingPageAdmin {
 		    }
 		});
 		
+		panel.revalidate();
+		panel.repaint();
 		frame.setVisible(true);
 	}
 
