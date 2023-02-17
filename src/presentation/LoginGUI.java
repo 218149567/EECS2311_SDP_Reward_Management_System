@@ -1,8 +1,6 @@
 package presentation;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,6 +10,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import businessLogic.Account;
+import businessLogic.Administrator;
+import businessLogic.PointsReceiver;
 import persistence.StubDataBase;
 
 public class LoginGUI {
@@ -21,13 +21,11 @@ public class LoginGUI {
     private JPasswordField passwordText;
 
     public void show() {
-
         frame = new JFrame();
         frame.setSize(400, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel = new JPanel();
         frame.add(panel);
-
         panel.setLayout(null);
 
         JLabel userLabel = new JLabel("Username");
@@ -53,7 +51,6 @@ public class LoginGUI {
         JButton backButton = new JButton("Back");
         backButton.setBounds(160, 150, 80, 25);
         panel.add(backButton);
-
         backButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 SignUpOrLogIn startPage = new SignUpOrLogIn();
@@ -67,6 +64,7 @@ public class LoginGUI {
                 String username = userText.getText();
                 String password = new String(passwordText.getPassword());
                 boolean loggedIn = false;
+
                 for (Account account : StubDataBase.getAccounts()) {
                     if (account.getUsername().equals(username) && account.getPassword().equals(password)) {
                         loggedIn = true;
@@ -74,22 +72,24 @@ public class LoginGUI {
                     }
                 }
 
-
-                if (loggedIn) {
-                    frame.dispose();
-                } else {
-                	//display error message "invalid username or password"
-                	JOptionPane.showMessageDialog(frame, "Invalid username or password. Please try again.");
-                    userText.setText("");
-                    passwordText.setText("");
-
+                if (loggedIn) { for (Account account : StubDataBase.getAccounts()) { 
+                	if (account.getUsername().equals(username) && account.getPassword().equals(password)) { 
+                		if (account instanceof PointsReceiver) { LandingPageUser user = new LandingPageUser(); frame.dispose(); } 
+                		else if (account instanceof Administrator) { LandingPageAdmin admin = new LandingPageAdmin(); frame.dispose(); } 
+                		return; }
+                	} 
                 }
+                JOptionPane.showMessageDialog(frame, "Invalid username or password. Please try again.");
+                userText.setText("");
+                passwordText.setText("");
+
             }
         });
 
         frame.setVisible(true);
     }
 }
+
 
 
 
