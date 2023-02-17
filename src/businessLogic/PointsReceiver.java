@@ -30,5 +30,19 @@ public class PointsReceiver extends Account{
 	public void removePoints(int points) {
 		this.balance -= points;
 	}
+	
+	public String sendPointsRequest(int requestedPoints) {
+	    
+		String request = "Points Request: " + requestedPoints + " points requested by " + this.getUsername();
+	    
+	    Administrator admin = (Administrator) system.getAdministrator();
+	    
+	    if (admin != null) {
+	        admin.addPointRequest(request);
+	        return "Point request sent to the administrator.";
+	    } else {
+	        return "No administrator account found. Point request not sent.";
+	    }
+	}
 
 }
