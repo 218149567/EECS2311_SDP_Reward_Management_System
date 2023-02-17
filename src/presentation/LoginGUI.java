@@ -69,8 +69,8 @@ public class LoginGUI {
                 */
 
                 if (loggedIn) {
-                    LandingPageUser landingPageUser = new LandingPageUser(loggedIn);
-                    landingPageUser.show();
+//                    LandingPageUser landingPageUser = new LandingPageUser(loggedIn);
+//                    landingPageUser.show();
                     frame.dispose();
                 } else {
                 	//display error message "invalid username or password"
