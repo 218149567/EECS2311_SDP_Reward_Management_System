@@ -138,11 +138,22 @@ public class LandingPageAdmin {
 		//listener for opening the window and closes the previous window
 		accountEditButton.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
-		        AccountEditGUI editPage = new AccountEditGUI();
+		        AccountEditGUI accountEditPage = new AccountEditGUI();
 		        frame.dispose();
 		    }
 		});
-
+		
+		JButton rewardEditButton = new JButton("Edit Rewards");
+		rewardEditButton.setBounds(350, 350, 80, 25);
+		panel.add(rewardEditButton);
+		
+		rewardEditButton.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        RewardEditGUI rewardEditPage = new RewardEditGUI();
+		        frame.dispose();
+		    }
+		});
+		
 		frame.setVisible(true);
 	}
 

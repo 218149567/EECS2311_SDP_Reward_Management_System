@@ -1,5 +1,7 @@
 package persistence;
 
+import java.util.ArrayList;
+
 import businessLogic.*;
 
 public class ManagementSystem {
@@ -43,7 +45,15 @@ public class ManagementSystem {
 	        db.getAccounts().set(db.getAccounts().indexOf(user), user);
 	    }
 	}
+	
+	public ArrayList<Account> getAccounts() {
+		return db.getAccounts();
+	}
 
+	public ArrayList<Reward> getRewards() {
+		return db.getRewards();
+	}
+	
 	public void addReward(Reward reward) {
 		ManagementSystem.db.getRewards().add(reward);
 	}
