@@ -13,6 +13,12 @@ public class PointsReceiver extends Account{
 		this.role = "PR";
 	}
 	
+	public void createPR(String name, String username, String password) {
+		
+		PointsReceiver pr = new PointsReceiver(name, username, password);
+		system.addAccount(pr);
+	}
+	
 	public int checkBalance() {
 		return this.balance;
 	}
