@@ -19,7 +19,7 @@ public class AccountEditGUI extends JFrame {
 
 	public AccountEditGUI() {
 		// Set up the window properties
-		setTitle("Account Editing Page");
+		setTitle("The Account Editing Page");
 		setSize(600, 400);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLayout(null);
