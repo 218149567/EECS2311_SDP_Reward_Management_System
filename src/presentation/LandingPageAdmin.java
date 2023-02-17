@@ -17,10 +17,8 @@ public class LandingPageAdmin {
 
 	private JFrame frame;
 	private JPanel panel;
-	
 	private ManagementSystem dbManager;
 	private static StubDataBase dbData;
-	
 	private String[] accountNamesAndIds;
 	
 	public LandingPageAdmin() {
@@ -95,6 +93,22 @@ public class LandingPageAdmin {
 		JLabel pointsLabel = new JLabel("Amount: ");
 		pointsLabel.setBounds(50, 450, 300, 25);
 		panel.add(pointsLabel);
+		
+		Administrator admin = new Administrator();
+		ArrayList<String> requests = admin.getPointRequests();
+		admin.addPointRequest("500 for Joe");
+		admin.addPointRequest("125 for Tara");
+		admin.addPointRequest("500 for Mike");
+
+		JComboBox<String> app = new JComboBox<>(requests.toArray(new String[0]));
+		app.setBounds(125, 500, 150, 25);
+		panel.add(app);
+		
+		JButton acceptRequest = new JButton("Accept");
+		acceptRequest.setBounds(350, 500, 100, 25);
+		panel.add(acceptRequest);
+		
+
 
 		JTextField pointsField = new JTextField();
 		pointsField.setBounds(125, 450, 200, 25);
@@ -175,3 +189,4 @@ public class LandingPageAdmin {
 
 	}
 }
+
