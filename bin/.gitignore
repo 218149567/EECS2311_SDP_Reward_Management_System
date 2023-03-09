@@ -1,5 +1,7 @@
-/presentation/
 /businessLogicTest/
 /persistenceTest/
+/presentation/
+/.DS_Store
 /businessLogic/
-/persistence/
+/Data_Base/
+/dataBase/
