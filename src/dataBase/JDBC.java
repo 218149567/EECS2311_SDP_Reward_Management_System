@@ -32,8 +32,8 @@ public class JDBC {
             stmt.close();
             conn.close();
 
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        } catch (SQLException exception) {
+            exception.printStackTrace();
         }
     }
 }
