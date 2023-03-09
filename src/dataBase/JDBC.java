@@ -23,8 +23,7 @@ public class JDBC {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                int age = rs.getInt("age");
-                System.out.println("ID: " + id + ", Name: " + name + ", Age: " + age);
+                System.out.println("ID: " + id + ", Name: " + name);
             }
 
             // Clean up
