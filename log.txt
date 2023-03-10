@@ -58,11 +58,11 @@ Meetings with My Team
 	- Add functionalities to the new GUI
 	- Fixed bug causing the data-base not to work properly
 	
-	Wednesday, Mar 15 Team Meeting Notes
+	Wednesday, Mar 05 Team Meeting Notes
 	-Discussed previous iteration mark and how can it improve
 	-Decided that adding a higher security system is not yet a priority
 	
-	Thursday, Mar 19 Team Meeting Notes
+	Thursday, Mar 09 Team Meeting Notes
 	-Finished the Data-Base
 	-redesigned the back end to use the Data-Base instead of the previous Stub-Data-Base
 	-Re-distributed work between team members
