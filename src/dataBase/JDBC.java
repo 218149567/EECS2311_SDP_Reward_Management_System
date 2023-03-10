@@ -6,7 +6,7 @@ import java.util.Map;
 public class JDBC {
 
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/your_database_name_here";
+        String url = "jdbc:mysql://localhost:3306/reward_DB";
         String user = System.getenv("DB_USERNAME");
         String password = System.getenv("DB_PASSWORD");
 
