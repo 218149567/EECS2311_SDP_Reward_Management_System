@@ -47,5 +47,24 @@ Meetings with My Team
 	- Implemented new login page design
 	- Fixed bug causing the request-point method not to send request to admin
 	
+	Monday, Feb 27 Team Meeting Notes
+	- Discuss project time-line and milestones
+	- Agree to change the look of our GUI
+	- Discuss Unit testing and Integration testing
+	- Assign action items to each team member
+	
+	Wednesday, Feb 29 Team Meeting Notes
+	- Implemented page design
+	- Add functionalities to the new GUI
+	- Fixed bug causing the data-base not to work properly
+	
+	Wednesday, Mar 15 Team Meeting Notes
+	-Discussed previous iteration mark and how can it improve
+	-Decided that adding a higher security system is not yet a priority
+	
+	Thursday, Mar 19 Team Meeting Notes
+	-Finished the Data-Base
+	-redesigned the back end to use the Data-Base instead of the previous Stub-Data-Base
+	-Re-distributed work between team members
 	
 	
