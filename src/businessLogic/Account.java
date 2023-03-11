@@ -11,6 +11,7 @@ public class Account {
 	private String password;
 	private int id;
 	private static int idCounter = 3;
+	private int points;
 	
 	private static ManagementSystem ms = new ManagementSystem();
 	
@@ -22,6 +23,7 @@ public class Account {
 		this.name = name;
 		this.username = username;
 		this.password = password;
+		this.points = 0;
 	}
 	
 	public static Account createAccount(String role, String name, String username, String password) {

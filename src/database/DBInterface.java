@@ -32,11 +32,12 @@ public class DBInterface {
 	public void createTables() throws SQLException{
 
 		String createAccountsTable = "CREATE TABLE IF NOT EXISTS tblUsers" 
-				+"(role VARCHAR(256), " 
-				+"name VARCHAR(256), "
+				+ "(role VARCHAR(256), " 
+				+ "name VARCHAR(256), "
 				+ "username VARCHAR(256), "
 				+ "password VARCHAR(256), "
-				+ "userId INTEGER)";
+				+ "userId INTEGER)"
+				+ "pointsBalance INTEGER";
 
 		String createRewardsTable = "CREATE TABLE IF NOT EXISTS tblRewards" 
 				+"(name VARCHAR(256), " 

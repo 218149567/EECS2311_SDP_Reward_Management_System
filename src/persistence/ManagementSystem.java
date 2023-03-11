@@ -39,7 +39,4 @@ public class ManagementSystem {
 		this.dbInterface.addAccount(role, name, username, password, userId);
 	}
 	
-	
-	
-
 }
