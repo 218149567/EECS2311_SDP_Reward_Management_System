@@ -10,18 +10,16 @@ import java.sql.SQLException;
 
 public class IntegratedTest {
 	
-	private PersistenceInterface pi;
+	private PersistenceInterface pinterface;
 	
 	@Before
 	public void setUp() throws Exception {
-		pi = new PersistenceInterface();
-		pi.setUp("testuser", "testpassword");
 	}
 	
 	@Test
 	public void testSetAndGetAccount() throws SQLException {
-		pi.setAccount("admin", "John Smith", "jsmith", "password");
-		Account acc = pi.getAccount("jsmith");
+		pinterface.setAccount("admin", "John Smith", "jsmith", "password");
+		Account acc = pinterface.getAccount("jsmith");
 		assertEquals("admin", acc.getRole());
 		assertEquals("John Smith", acc.getName());
 		assertEquals("jsmith", acc.getUsername());
@@ -30,16 +28,16 @@ public class IntegratedTest {
 	
 	@Test
 	public void testUsernameChecker() throws SQLException {
-		pi.setAccount("user", "Jane Doe", "jdoe", "password");
-		assertTrue(pi.usernameChecker("jdoe"));
-		assertFalse(pi.usernameChecker("jsmith"));
+		pinterface.setAccount("user", "Jane Doe", "je", "xxxxxxxx");
+		assertTrue(pinterface.usernameChecker("je"));
+		assertFalse(pinterface.usernameChecker("jsmith"));
 	}
 	
 	@Test
 	public void testPasswordChecker() throws SQLException {
-		pi.setAccount("user", "Jane Doe", "jdoe", "password");
-		assertTrue(pi.passwordChecker("jdoe", "password"));
-		assertFalse(pi.passwordChecker("jdoe", "wrongpassword"));
-		assertFalse(pi.passwordChecker("jsmith", "password"));
+		pinterface.setAccount("user", "Jane Doe", "jdoe", "password");
+		assertTrue(pinterface.passwordChecker("jdoe", "password"));
+		assertFalse(pinterface.passwordChecker("jdoe", "incorrect"));
+		assertFalse(pinterface.passwordChecker("wrongusername", "password"));
 	}
 }
