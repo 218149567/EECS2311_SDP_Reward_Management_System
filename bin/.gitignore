@@ -1,2 +1,7 @@
 /dataBase/
 /database/
+/businessLogic/
+/businessLogicTest/
+/persistence/
+/persistenceTest/
+/presentation/

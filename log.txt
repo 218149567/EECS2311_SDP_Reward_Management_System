@@ -37,6 +37,37 @@ Meetings with My Team
 	- Lastly, we created all the necessary written documentation (architectural sketch, Wiki and 
 	  log file).
 	 
+	 User Story 1: As a user, I want to be able to create an account and then login using it.
+	- Development tasks:
+		Implement account creation form (1 days allocated, 1 days spent)
+		Set up user authentication (1 days allocated, 1 days spent)
+		Add account creation functionality to backend (2 days allocated, 1 days spent)
+	 	Implement account login form (1 days allocated, 1 days spent)
+	 	Add account login functionality to backend (2 days allocated, 3 days spent)
+	 Total time allocated: 7 days
+	 Total time spent: 7 days
+	 
+	 User Story 2: As a user, I want to be able to withdraw rewards and request points into my account.
+	- Development Tasks:
+		Implement a Request Point method that can interact with the user's account (1 days allocated, 2 days spent)
+		Implement approval and and deny methods for the admin (1 days allocated, 1 days spent)
+		Implement a Reward class (1 days allocated, 1 days spent)
+		Update the account balance based on the amount withdrawn (2 days allocated, 2 days spent)
+		Write unit tests for the Withdrawal class (1 days allocated, 2 days spent)
+		Add a "Request point", "Rewards", "Approve request" buttons to the GUI (1 days allocated, 1 days spent)
+	Total time allocated: 7 days
+	Total time spent: 9 days
+	 
+	 User Story 3: As a user, I want to see a basic GUI for the application.
+	- Development Tasks:
+		Design a basic GUI layout (1 days allocated, 1 days spent)
+		Create GUI components for the login page, account page, and rewards page. (3 days allocated, 2 days spent)
+		Write unit tests for the GUI components. (1 days allocated, 1 days spent)
+		Implement navigation between the different pages. (2 days allocated, 1 days spent)
+	 Total time allocated: 7 days
+	 Total time spent: 5 days
+	 
+	 
 	Monday, Feb 20 Team Meeting Notes
 	- Discuss project time-line and milestones
 	- Decide to prioritize the DataBase over the next week
@@ -66,5 +97,31 @@ Meetings with My Team
 	-Finished the Data-Base
 	-redesigned the back end to use the Data-Base instead of the previous Stub-Data-Base
 	-Re-distributed work between team members
+	
+	User story 1: As a user, I want my account information to be stored securely in a database so that I can access it at any time.
+	- Development tasks:
+		Design and implement the database schema (3 days allocated, 3 days spent)
+		Write JDBC code to connect to eclipse (3 days allocated, 4 days spent)
+	Total time allocated: 6 days
+	Actual time spent: 7 days
+	
+	User Story: As a user, I want my information and transactions to be securely stored in a database, 
+	so that my data is available between sessions.
+	- Development tasks:
+		Database design and creation (4 days allocated, 4 days spent)
+		Description: We researched and designed the database schema, created the necessary tables, and set up the database environment.
+		JDBC Connection (1 days allocated, 2 days spent)
+		Description: We implemented the JDBC connection to allow the application to connect to the database and perform CRUD (Create, Read, Update, Delete) operations.
+		Task 3: Automatic Table Creation ( 2 days allocated, 1 days spent)
+		Description: We added functionality to the sign-up process to automatically create the necessary database tables based on the schema we designed. This involved writing SQL scripts to create the tables and integrating them with the sign-up process.
+		ours
+
+
+
+
+
+
+
+
 	
 	
