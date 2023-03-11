@@ -2,7 +2,9 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class DBInterface {
 
@@ -54,5 +56,27 @@ public class DBInterface {
 		statement.executeUpdate(insertUser1);
 		statement.executeUpdate(insertUser2);
 	}
+	
+	public ResultSet retriveAccount(String username) throws SQLException{
+		String query = "SELECT * FROM tblUsers WHERE username = " + "'"+ username + "'";
+		java.sql.Statement statement = connection.createStatement();
+		
+		ResultSet rs = statement.executeQuery(query);
+		
+		ResultSet user = null;
+		if(rs.next()) {
+			user = rs;
+		}
+		
+		return user;
+	}
+	
+	public void addAccount(String role, String name, String username, String password, int userID) throws SQLException{
+		String query = String.format("INSERT INTO tblUsers VALUES ('%s', '%s', '%s', '%s', '%d')", role, name, username, password, userID);
+		java.sql.Statement statement = connection.createStatement();
+		statement.executeUpdate(query);
+		System.out.println("added row to DB");
+	}
+	
 
 }
